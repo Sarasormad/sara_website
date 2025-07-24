@@ -1,11 +1,71 @@
 <!DOCTYPE html>
 <html lang = "en">
     <head>
-        <title> MY HTML Site</title>
+        <meta charset = "UTF-8">
+        <title>Mini Portfolio</title>
+        <meta name="viewport" content=""width=device-width, initial-scale="1.0">
+        <link rel="stylesheet" href= "portfolio.css"> <!-- External CSS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
     </head>
-<body>
-    <h1>Hello World</h1>
-    <p>I'm hosted with GitHub Pages.</p>
 
+
+
+<body>
+ <!-- My content will go here -->
+    <!--THIS HEADER WILL BE MY HEADER AND INTRODUCTION PORTION-->
+    <header>
+        <h1>Sara Madjdi-Sorkhabi</h1>
+        <div class="photo-row">
+            <img src="photo1.jpg" alt="Sara 1">
+            <img src="photo2.jpg" alt="Sara 2">
+            <img src="photo3.jpg" alt="Sara 3">
+          </div>
+        <p>Computer Science | Statistics | Data Science </p>   
+    </header>
+
+    <!--THIS WILL BE MY NAVIGATION BAR-->
+    <nav>
+        <ul>
+            <li><a href = "#about"> About</a></li>
+            <li><a href = "#projects"> Projects</a></li>
+            <li><a href = "#contact"> Contact</a></li>
+        </ul>
+    </nav>
+    <!--THIS WILL BE THE ABOUT SECTION-->
+    <section id = "about">
+        <h2>About Me</h2>
+        <p>[Insert brief intro about my background, skills, and goals!]</p>
+    </section>
+    
+    <!--THIS WILL BE MY PROJECTS SECTION-->
+    <section id = "projects">
+        <h2>Projects</h2>
+        <div class = "projects">
+            <h3>Project Title</h3>
+            <p>[Insert description of the project</p>
+            <a href="https://github.com/sarasormad" target ="_blank"> View on Github </a>
+        </div>
+    </section>
+
+
+    <!--THIS WILL BE MY CONTACT INFORMATION-->
+    <section id = "contact">
+        <h2>Contact Info</h2>
+        <form action = "saramadjdi@gmail.com" method="post" enctype ="text/plain">
+            <label for = "name"> Name: </label>
+            <input type ="text" id="name" name="name" required>
+            <label for ="message"> Message: </label>
+            <textarea id="message" name="message" rows="'4" required></textarea>
+            <button type= "submit">Send</button>
+        </form>
+    </section>
+
+    <!--THIS IS MY FOOTER-->
+    <footer>
+        <p>&copy; 2025 Sara Madjdi-Sorkhabi. All rights reserved. </p>
+    </footer>
 </body>
+
 </html>

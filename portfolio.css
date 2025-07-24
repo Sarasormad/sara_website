@@ -19,12 +19,11 @@ body {
   }
   
   section {
-    background-color: #c2adad;
     font-family: 'Calligrapher',BernhardFashion BT;
     max-width: 700px;
     margin: 20px auto;
     border-radius: 8px;
-    box-shadow: 0 2px 8px #accda79d;
+    
   }
   
   footer {
@@ -32,4 +31,32 @@ body {
     padding: 10px;
     background-color: #c2adad;
     color: #555;
+  }
+
+  .main-pic{
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+    object-position: center;
+    background-size: 150%;
+    border-radius: 100%;
+    
+  }
+
+  .jpl-pic{
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+    object-position: center;
+    background-size: 250%;
+    border-radius: 100%;
+  }
+
+  .fun-pic{
+    width: 200px;
+    height:200px;
+    object-fit: cover;
+    object-position: center;
+    background-size: 250%;
+    border-radius: 100%;
   }

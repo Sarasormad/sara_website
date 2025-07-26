@@ -57,13 +57,12 @@ header {
 }
 
 #about >div {
-  margin-left: 90px;
-  margin-right: 90px;
+  margin-left: 100px;
+  margin-right: 50px;
 }
 
 
-.about-left,
-.about-right {
+.about-left{
   display: flex;
   align-items: center;
   gap: 120px;
@@ -72,25 +71,6 @@ header {
   line-height: 1.6;
 }
 
-.about-right {
-  flex-direction: row-reverse;
-}
-
-
-.about-left .image img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-.about-right .image img {
-  width: 250px;
-  height: 250px;
-  object-fit: cover;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
 
 #about h2{
   margin-bottom: 20px;
@@ -112,19 +92,28 @@ header {
    
 }
 
-
-.with-photo {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  flex-wrap: wrap;
+.image-personal img {
+  width: 400px;
+  height: 280px;
+  margin-top: 50px;
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 
-.image-personal img {
-  width: 250px;
-  height: 250px;
-  margin-top: 50px;
+.ed-photo{
+  width: 200px;
+  height: 300px;
+  margin-top: 40px;
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.ed-photo2{
+  width: 200px;
+  height: 300px;
+  margin-top: 40px;
   object-fit: cover;
   border-radius: 0px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);

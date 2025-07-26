@@ -1,0 +1,158 @@
+body {
+  background-color:  #1a1a1a;
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #f0f0f0;
+  margin: 0;
+  line-height: 1.6;
+}
+.top-banner {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color:#333;
+  color: hwb(0 100% 0%);
+}
+
+
+.logo {
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.nav-tabs {
+  margin-right: 30;
+  font-size: 20px;
+  margin-left: 90px; /* Adjust this value as needed */
+}
+
+.nav-tabs .tab {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  padding: 20px 80px;
+  transition: background-color 0.3s;
+}
+
+.nav-tabs .tab:hover {
+  background-color: #575757;
+  border-radius: 4px;
+}
+
+
+header {
+  font-size: 36px;
+  margin: 50px;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 2px 1px 2px #529379;
+  position: relative; /*Absolute allows me to place the image anywhere*/
+  top: 50px;
+  text-align: center;
+  color: #f0f0f0;
+
+}
+
+#about >div {
+  margin-left: 100px;
+  margin-right: 50px;
+}
+
+
+.about-left{
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  margin: 50px 0;
+  font-family: 'Cormorant Garamond', serif;
+  line-height: 1.6;
+}
+
+
+#about h2{
+  margin-bottom: 20px;
+  font-size: 36px;
+}
+
+#about-right h2{
+  margin-bottom: 20px;
+  font-size: 50px;
+}
+
+#about p {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  flex: 1;
+  line-height: 1.2;
+  min-width: 250px;
+  max-width: 700px;
+   
+}
+
+.image-personal img {
+  width: 400px;
+  height: 280px;
+  margin-top: 50px;
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+.ed-photo{
+  width: 200px;
+  height: 300px;
+  margin-top: 40px;
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.ed-photo2{
+  width: 200px;
+  height: 300px;
+  margin-top: 40px;
+  object-fit: cover;
+  border-radius: 0px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-hobbies {
+  width: 70%;
+  margin-top: 40px;
+  margin-right: 70px;
+  overflow: hidden;
+  height: 300px; /* adjust to your image height */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-track img {
+  width: 300px; /* adjust as needed */
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

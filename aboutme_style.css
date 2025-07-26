@@ -19,6 +19,14 @@ body {
   z-index: 1000;
 }
 
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color:#333;
+  color: hwb(0 100% 0%);
+}
+
+
 .logo {
   font-size: 26px;
   font-weight: bold;
@@ -117,4 +125,34 @@ header {
   object-fit: cover;
   border-radius: 0px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.image-hobbies {
+  width: 70%;
+  margin-top: 40px;
+  margin-right: 70px;
+  overflow: hidden;
+  height: 300px; /* adjust to your image height */
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  width: fit-content;
+  animation: scroll 30s linear infinite;
+}
+
+.carousel-track img {
+  width: 300px; /* adjust as needed */
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }

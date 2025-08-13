@@ -6,7 +6,7 @@
 html { -webkit-text-size-adjust: 100%; }
 
 body {
-  background-color: #2a2a2a;   /* grey page background */
+  background-color: #1a1a1a;   /* grey page background */
   color: #f0f0f0;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
@@ -21,13 +21,17 @@ body {
 .top-banner {
   background-color: #333;
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  padding: 16px 20px;
   position: fixed;
-  inset: 0 0 auto 0;
+  inset: 0 0 auto 0; /* top:0; left:0; right:0 */
   z-index: 1000;
   border-bottom: 1px solid #444;
-  padding: 12px 0;            /* inner container controls width/padding */
 }
-.topbar-inner { display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding: 0 16px; }
+.topbar-inner { display:flex; align-items:center; justify-content:space-between; gap:.75rem; padding: 16px 20px;}
 
 .logo { font-size: 26px; font-weight: bold; }
 
@@ -43,28 +47,28 @@ body {
   text-decoration: none;
   padding: 8px 12px;
   border-radius: 8px;
-  transition: background-color .2s;
 }
 .nav-tabs .tab:hover { background-color: #575757; }
 
 /* ===== Footer (shared) ===== */
 footer {
   text-align: center;
-  padding: 16px;
+  padding: 8px;
   background-color: #333;
   color: #fff;
   margin-top: 2.5rem;
-  border-radius: 12px;        /* optional: soften on grey bg */
 }
 
 /* ===== Contact content ===== */
 .contact-head { text-align: center; margin: 2rem 0 1rem; }
+
 .contact-head h1 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(1.8rem, 2.4vw + 1rem, 3rem);
+  text-shadow: 2px 1px 2px #529379;
   margin: 0 0 .25rem;
 }
-.contact-head p { color: #ccc; margin: 0; }
+.contact-head p { color:#529379; margin: 0; }
 
 .contact-actions {
   display: flex; gap: .75rem; flex-wrap: wrap; justify-content: center;
@@ -78,11 +82,9 @@ footer {
   text-decoration: none;
   padding: .6rem .9rem;
   border-radius: 10px;
-  transition: background .2s, border-color .2s, transform .02s;
 }
-.btn:hover { background: #2a2a2a; border-color: #777; }
+.btn:hover { background: #529379; border-color: #777; }
 .btn:active { transform: translateY(1px); }
-.btn.secondary { background: #171717; }
 
 /* form card */
 .contact-form {
@@ -122,7 +124,7 @@ footer {
   background: #2e4e44;
   border-color: #3a6b5c;
 }
-.btn.submit:hover { background: #356a5a; }
+.btn.submit:hover { background: #529379; }
 
 /* 2-col form on wider screens */
 @media (min-width: 720px) {

@@ -1,0 +1,51 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background-color: #1a1a1a;
+  font-family: 'Playfair Display', serif; /* your original choice */
+  font-weight: 700;
+  color: #f0f0f0;
+  margin: 0;
+  line-height: 1.6;
+  padding-top: 72px; /* room for fixed banner */
+}
+
+h1, h2 { font-family: 'Cormorant Garamond', serif; line-height: 1.2; margin: 0 0 .5rem; }
+
+.container { width: min(100% - 2rem, 1100px); margin-inline: auto; }
+
+/* ===== Top banner ===== */
+.top-banner {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  padding: 16px 20px;
+  position: fixed;
+  inset: 0 0 auto 0; /* top:0; left:0; right:0 */
+  z-index: 1000;
+  border-bottom: 1px solid #444;
+}
+.logo { font-size: 26px; font-weight: bold; }
+
+.nav-tabs { 
+  margin-right: 30px; 
+  font-size: 18px; 
+  display: flex; 
+  flex-wrap: wrap; 
+  gap: .5rem; 
+}
+
+.nav-tabs .tab {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;            /* smaller so it doesn’t overflow */
+  border-radius: 8px;
+  transition: background-color .2s;
+}
+.nav-tabs .tab:hover { background-color: #575757; }

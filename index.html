@@ -1,100 +1,59 @@
 <!DOCTYPE html>
 <html lang = "en">
-    <head>
-        <meta charset = "UTF-8">
-        <title>Mini Portfolio</title>
-        <meta name="viewport" content=""width=device-width, initial-scale="1.0">
-        <link rel="stylesheet" href= "portfolio.css"> <!-- External CSS -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet">
-    </head>
+<head>
+    <meta charset = "UTF-8">
+    <title>Mini Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href= "portfolio.css"/> <!-- External CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet"/>
+</head>
 
-<div class="top-banner">
-    <div class="logo">Sara's Portfolio</div>
-    <div class="nav-tabs">
-        <a href="index.html" class="tab">Home</a>
-        <a href="aboutme.html" class="tab">About</a>
-        <a href="#projects" class="tab">Projects</a>
-        <a href="#contact" class="tab">Contact</a>
-    </div>
-    </div>
-</div>
 
 
 <body>
- <!-- My content will go here -->
-    <!--THIS HEADER WILL BE MY HEADER AND INTRODUCTION PORTION-->
-    <header>
-        <h1>Sara Madjdi-Sorkhabi</h1>
-        <p>Computer Science | Statistics | Data Science </p>
-        <p>California State University, Northridge </p>
-        <img src="/Users/saramadjdi/Desktop/32f353_6d4190a79c5c46eea4049179b456c78f~mv2.gif" class = "csun", alt="csun">    
+    <header class = "top-banner">
+        <div class="logo">Sara's Portfolio</div>
+        <nav class ="nav-tabs">
+            <a href="index.html" class="tab">Home</a>
+            <a href="aboutme.html" class="tab">About</a>
+            <a href="#projects" class="tab">Projects</a>
+            <a href="contact.html" class="tab">Contact</a>
+        </nav>
     </header>
 
-    <section id = "profile-pic">
-        <div class="photos">
-            <img src="/Users/saramadjdi/Desktop/Screenshot 2025-07-24 at 1.51.03 PM.png" class = "main-pic", alt="Sara 1">
-            <!-- <img src="/Users/saramadjdi/Downloads/IMG_9179.jpg"  class="jpl-pic" , alt="Sara 2">
-            <img src="/Users/saramadjdi/Desktop/Screenshot 2025-07-24 at 2.01.51 PM.png" class = "fun-pic", alt="Sara 3"> -->
-        </div>
-    </section>
 
-    <!--THIS WILL BE MY NAVIGATION BAR-->
- <!--  <nav>
-        <ul>
-            <li><a href = "#about"> About</a></li>
-            <li><a href = "#projects"> Projects</a></li>
-            <li><a href = "awards"> Awards</a></li>
-            <li><a href = "#contact"> Contact</a></li>
-        </ul>
-    </nav>
+    <main class = "container intro-grid">
+        <header>
+            <h1>Sara Madjdi-Sorkhabi</h1>
+            <p>Computer Science | Statistics | Data Science </p>
+            <p>California State University, Northridge </p>
+            <img src="/Users/saramadjdi/Desktop/32f353_6d4190a79c5c46eea4049179b456c78f~mv2.gif" class="csun" alt="CSUN logo">
+        </header>
 
--->
-    <!--THIS WILL BE THE ABOUT SECTION-->
-    <div class = "about">
+        <section id = "profile-pic">
+            <div class="photos">
+                <img src="/Users/saramadjdi/Desktop/Screenshot 2025-07-24 at 1.51.03 PM.png" class = "main-pic", alt="Sara portrait"/>
+                <!-- <img src="/Users/saramadjdi/Downloads/IMG_9179.jpg"  class="jpl-pic" , alt="Sara 2">
+                <img src="/Users/saramadjdi/Desktop/Screenshot 2025-07-24 at 2.01.51 PM.png" class = "fun-pic", alt="Sara 3"> -->
+            </div>
+        </section>
+
+    </main>
+
+    <section class = "about container">
         <h2>Introduction</h2>
         <p>Welcome to my porfolio! My name is Sara. I am an aspiring data analyst with a passion for transforming complex data to draw conclusions and help improve systems. With a background in Computer Science and Statistics, I specialize in database design, data preprocessing, data visualizations, full-stack dashboard development, and machine learning implementation. If you want to know more about me, please visit my 'About'!  </p>
-    </div>
+    </section>
     
-    <!--THIS WILL BE MY PROJECTS SECTION
-    <section id = "projects">
-        <h2>Projects</h2>
-        <div class = "projects">
-            <h3>Project Title</h3>
-            <p>[Insert description of the project</p>
-            <a href="https://github.com/sarasormad" target ="_blank"> View on Github </a>
-        </div>
-    </section>
-
-    <section id = "awards">
-        <h2>Awards and Achievments</h2>
-        <div class = "awards">
-            <h3>Award Title</h3>
-            <p>[Insert Award</p>
-        </div>
-    </section>
-
-
-    THIS WILL BE MY CONTACT INFORMATION
-    <section id = "contact">
-        <h2>Contact Info</h2>
-        <form action = "saramadjdi@gmail.com" method="post" enctype ="text/plain">
-            <label for = "name"> Name: </label>
-            <input type ="text" id="name" name="name" required>
-            <label for ="message"> Message: </label>
-            <textarea id="message" name="message" rows="'4" required></textarea>
-            <button type= "submit">Send</button>
-        </form>
-    </section>
--->
-
-
-    <!--THIS IS MY FOOTER-->
-    <footer>
+    <footer class="container">
         <p>&copy; 2025 Sara Madjdi-Sorkhabi. All rights reserved. </p>
     </footer>
+
+
+
 </body>
 
 </html>

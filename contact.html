@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Mini Portfolio – Contact</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="contact.css" />
+</head>
+<body>
+  <!-- Header / Nav (same as other pages) -->
+  <div class="top-banner">
+    <div class="container topbar-inner">
+      <div class="logo">Sara's Portfolio</div>
+      <nav class="nav-tabs" aria-label="Primary">
+        <a href="index.html" class="tab">Home</a>
+        <a href="aboutme.html" class="tab">About</a>
+        <a href="#projects" class="tab">Projects</a>
+        <a href="contact.html" class="tab" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container">
+    <header class="contact-head">
+      <h1>Contact</h1>
+      <p>Have a project, opportunity, or question? Let’s talk.</p>
+    </header>
+
+    <!-- Quick actions -->
+    <div class="contact-actions">
+      <a class="btn" href="mailto:youremail@example.com">Email Me</a>
+      <a class="btn secondary" href="https://www.linkedin.com/in/sarasormad" target="_blank" rel="noopener">LinkedIn</a>
+    </div>
+
+    <!-- Contact form (using FormSubmit as example) -->
+    <form class="contact-form" action="https://formsubmit.co/saramadjdi@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_next" value="https://your-domain.com/thanks.html" />
+      <input type="text" name="_honey" style="display:none" />
+
+      <div class="grid">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="subject">Subject</label>
+        <input id="subject" name="subject" type="text" required placeholder="What’s this about?" />
+      </div>
+
+      <div class="field">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="Tell me a bit about your request…"></textarea>
+      </div>
+
+      <button class="btn submit" type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <!-- Footer (same as other pages) -->
+  <footer class="container">
+    <p>&copy; 2025 Sara Madjdi-Sorkhabi. All rights reserved.</p>
+  </footer>
+</body>
+</html>

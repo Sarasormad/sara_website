@@ -1,158 +1,159 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
 body {
-  background-color:  #1a1a1a;
+  padding-top: 72px;                 /* room for fixed header */
+  background-color: #1a1a1a;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   color: #f0f0f0;
   margin: 0;
   line-height: 1.6;
 }
+
+/* Optional: centered content width like other page */
+.container { width: min(100% - 2rem, 1100px); margin-inline: auto; }
+
+/* ===== Shared header / nav ===== */
 .top-banner {
   background-color: #333;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 40px;
+  gap: .75rem;
+  padding: 16px 20px;
   position: fixed;
-  width: 100%;
-  top: 0;
+  inset: 0 0 auto 0;
   z-index: 1000;
+  border-bottom: 1px solid #444;
 }
-
-footer {
-  text-align: center;
-  padding: 5px;
-  background-color:#333;
-  color: hwb(0 100% 0%);
-}
-
-
-.logo {
-  font-size: 26px;
-  font-weight: bold;
-}
-
+.logo { font-size: 26px; font-weight: bold; }
 .nav-tabs {
-  margin-right: 30;
-  font-size: 20px;
-  margin-left: 90px; /* Adjust this value as needed */
+  margin-right: 30px;               /* add px */
+  font-size: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
 }
-
 .nav-tabs .tab {
   color: white;
   text-decoration: none;
-  margin-left: 20px;
-  padding: 20px 80px;
-  transition: background-color 0.3s;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: background-color .2s;
+}
+.nav-tabs .tab:hover { background-color: #575757; }
+
+/* ===== Footer (shared) ===== */
+footer {
+  text-align: center;
+  padding: 16px;
+  background-color: #333;
+  color: #fff;
 }
 
-.nav-tabs .tab:hover {
-  background-color: #575757;
-  border-radius: 4px;
-}
-
-
+/* ===== Page heading ===== */
 header {
-  font-size: 36px;
-  margin: 50px;
   font-family: 'Playfair Display', serif;
   text-shadow: 2px 1px 2px #529379;
-  position: relative; /*Absolute allows me to place the image anywhere*/
-  top: 50px;
-  text-align: center;
   color: #f0f0f0;
-
-}
-
-#about >div {
-  margin-left: 100px;
-  margin-right: 50px;
-}
-
-
-.about-left{
-  display: flex;
-  align-items: center;
-  gap: 120px;
-  margin: 50px 0;
-  font-family: 'Cormorant Garamond', serif;
-  line-height: 1.6;
-}
-
-
-#about h2{
-  margin-bottom: 20px;
+  text-align: center;
+  margin: 48px 0 24px;
   font-size: 36px;
 }
 
-#about-right h2{
-  margin-bottom: 20px;
-  font-size: 50px;
+/* ===== About sections (works with .about-row or .about-left) ===== */
+.about-row,
+.about-left {
+  display: grid;
+  grid-template-columns: 1fr;       /* mobile: stack */
+  gap: 1.5rem;
+  align-items: start;
+  margin: 2rem 0;
+  padding: 0 1rem;
+  font-family: 'Cormorant Garamond', serif;
 }
 
-#about p {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-  flex: 1;
-  line-height: 1.2;
-  min-width: 250px;
-  max-width: 700px;
-   
-}
+/* text block */
+.about-row .text,
+.about-left .text { max-width: 70ch; }
 
+/* section headings & paragraphs */
+#about h2,
+.about-row h2,
+.about-left h2 { margin: 0 0 12px; font-size: clamp(1.4rem, 1.2vw + 1rem, 2.25rem); }
+
+#about p,
+.about-row p,
+.about-left p { margin: 0 0 10px; font-size: 18px; line-height: 1.7; }
+
+/* images: personal single */
 .image-personal img {
-  width: 400px;
-  height: 280px;
-  margin-top: 50px;
-  object-fit: cover;
-  border-radius: 0px;
+  width: min(100%, 400px);       /* keep responsive */
+  height: auto;                  /* let it scale naturally */
+  max-height: 230px;             /* limit the vertical length */
+  object-fit: cover;             /* crop if needed */
+  border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-
-.ed-photo{
-  width: 200px;
-  height: 300px;
-  margin-top: 40px;
-  object-fit: cover;
-  border-radius: 0px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+/* images: education pair */
+.image-personal-ed {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 1rem;
+  align-items: start;
 }
-.ed-photo2{
-  width: 200px;
-  height: 300px;
-  margin-top: 40px;
+.ed-photo,
+.ed-photo2 {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: 0px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,.2);
 }
 
+/* hobbies carousel */
 .image-hobbies {
-  width: 70%;
-  margin-top: 40px;
-  margin-right: 70px;
+  width: 100%;
+  margin-top: 16px;
   overflow: hidden;
-  height: 300px; /* adjust to your image height */
+  height: 220px;
   position: relative;
 }
-
 .carousel-track {
   display: flex;
-  width: fit-content;
+  width: max-content;
   animation: scroll 30s linear infinite;
+  gap: 0;                           /* seamless */
 }
-
 .carousel-track img {
-  width: 300px; /* adjust as needed */
-  height: 100%;
+  width: clamp(200px, 20vw, 320px);
+  height: 100%;        /* fills the new 220px height */
   object-fit: cover;
 }
 
 @keyframes scroll {
-  0% {
-    transform: translateX(0);
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ===== Breakpoints ===== */
+@media (min-width: 780px) {
+  .about-row,
+  .about-left {
+    grid-template-columns: 1.15fr 1fr;  /* text | image(s) */
+    gap: 2rem;
+    padding: 0;                          /* container handles side padding */
   }
-  100% {
-    transform: translateX(-50%);
-  }
+}
+
+@media (min-width: 1000px) {
+  .nav-tabs { font-size: 20px; gap: .75rem; }
+  .about-row,
+  .about-left { gap: 2.5rem; }
 }

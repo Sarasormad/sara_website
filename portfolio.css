@@ -1,154 +1,119 @@
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
 body {
-    background-color: #1a1a1a;
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    color: #f0f0f0;
-    margin: 0;
-  }
-  .top-banner {
-    background-color: #333;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-  }
-  
-  .logo {
-    font-size: 26px;
-    font-weight: bold;
-  }
+  background-color: #1a1a1a;
+  font-family: 'Playfair Display', serif; /* your original choice */
+  font-weight: 700;
+  color: #f0f0f0;
+  margin: 0;
+  line-height: 1.6;
+  padding-top: 72px; /* room for fixed banner */
+}
 
-  .nav-tabs {
-    margin-right: 30;
-    font-size: 20px;
-    margin-left: 90px; /* Adjust this value as needed */
-  }
+h1, h2 { font-family: 'Cormorant Garamond', serif; line-height: 1.2; margin: 0 0 .5rem; }
 
-  .nav-tabs .tab {
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    padding: 20px 80px;
-    transition: background-color 0.3s;
-  }
-  
-  .nav-tabs .tab:hover {
-    background-color: #575757;
-    border-radius: 4px;
-  }
-  
+.container { width: min(100% - 2rem, 1100px); margin-inline: auto; }
 
-  header {
-    padding : 0;
-    margin: 1;
-    font-size: 24px;
-    font-family: 'Cormorant Garamond', serif;
-    text-shadow: 2px 1px 2px #529379;
-    position: relative; /*Absolute allows me to place the image anywhere*/
-    right: 200px;
-    top: 250px;
-    text-align: center;
-    color: #f0f0f0;
+/* ===== Top banner ===== */
+.top-banner {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .75rem;
+  padding: 16px 20px;
+  position: fixed;
+  inset: 0 0 auto 0; /* top:0; left:0; right:0 */
+  z-index: 1000;
+}
+.logo { font-size: 26px; font-weight: bold; }
+.nav-tabs { margin-right: 30px; font-size: 18px; display: flex; flex-wrap: wrap; gap: .5rem; }
+.nav-tabs .tab {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;            /* smaller so it doesn’t overflow */
+  border-radius: 8px;
+  transition: background-color .2s;
+}
+.nav-tabs .tab:hover { background-color: #575757; }
 
-  }
+/* ===== HERO (two-column on wide, stacked on mobile) ===== */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr;    /* mobile first */
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 1rem;
+}
 
-  .csun{
-    width: 70px;
-    height:70px;
-    object-position: center;
-    object-fit: cover;
-    background-size: 150%;
-    border-radius: 100%;
-  }
+.intro-grid header {
+  text-align: left;
+  padding: 0;
+  text-shadow: 2px 1px 2px #529379;
+  color: #f0f0f0;
+  font-size: 24px;
+}
 
-  .about {
-    font-family: 'Cormorant Garamond', serif;
-    position: relative; /*Absolute allows me to place the image anywhere*/
-    bottom: 200px;
-    right: 15px;
-    max-width: 1000px;
-    margin: 20px auto;
-    margin-left: 320px;
-    
-  }
+.csun {
+  width: 64px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: .75rem;
+}
 
-  .about p{
-    line-height: 1.8;
-    font-size: 22px;
-  }
+#profile-pic .photos { display: grid; gap: 1rem; grid-template-columns: 1fr; }
 
-  .about h2{
-    font-weight: bold;
-    font-size: 32px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 5px;
-    background-color:#333;
-    color: hwb(0 100% 0%);
-  }
+.main-pic {
+  width: clamp(220px, 32vw, 380px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 50%;
+  margin: 0 auto;                /* center on mobile */
+}
 
-  .main-pic{
-    width: 500px;
-    height:500px;
-    position: relative; /*Absolute allows me to place the image anywhere*/
-    left: 760px;
-    bottom: 180px;
-    object-fit: cover;
-    background-size: 150%;
-    border-radius: 100%;
-    
-  }
+/* ===== About ===== */
+.about { max-width: 70ch; margin: 1rem auto 2rem; padding: 0 1rem; }
+.about p { line-height: 1.8; font-size: 20px; }
+.about h2 { font-weight: bold; font-size: 32px; }
 
-  /*
-  .photos{
-    width: 600px;
-    height:300px;
-    overflow: hidden;
-    border-radius: 0px;
-    margin: auto;
-  }
-  .slideshow{
-    display: flex;
-    width: 900px;
-    animation: slide 10s infinite;
-  }
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 5px;
+  background-color:#333;
+  color: hwb(0 100% 0%);
+}
 
-  .slideshow img{
-    width: 600px;
-    height:300px;
-    object-fit: cover;
-  }
+@media (min-width: 1000px) {
+  .top-banner { padding: 18px 40px; }
+  .nav-tabs { font-size: 20px; gap: .75rem; }
+  .about { max-width: 75ch; }
+}
 
-  @keyframes slide{
-    0% {transform: translateX(0);}
-    25% {transform: translateX(-200px);}
-    50% {transform: translateX(-400px);}
-    75% {transform: translateX(-200px);}
-  }
+/* === #3 Tighten hero spacing === */
+.intro-grid { gap: 2rem; padding: 2.5rem 1rem; }
 
+@media (min-width: 900px) {
+  .intro-grid { grid-template-columns: 1.2fr 0.9fr; gap: 2.5rem; }
+  .intro-grid header { margin-top: .25rem; }
+}
 
-  .jpl-pic{
-    width: 200px;
-    height:200px;
-    object-fit: cover;
-    object-position: center;
-    background-size: 250%;
-    border-radius: 100%;
-  }
+/* === #4 Nav tweaks === */
+.nav-tabs .tab { padding: 8px 10px; }
+.top-banner { border-bottom: 1px solid #444; }
 
-  .fun-pic{
-    width: 200px;
-    height:200px;
-    object-fit: cover;
-    object-position: center;
-    background-size: 250%;
-    border-radius: 100%;
-  }
-*/
+/* Smarter type scale */
+:root{
+  --h1: clamp(1.8rem, 2.4vw + 1rem, 3rem);
+  --h2: clamp(1.3rem, 1.2vw + 1rem, 2rem);
+}
+h1 { font-size: var(--h1); }
+h2 { font-size: var(--h2); }
+
+/* Portrait a bit smaller on large monitors */
+.main-pic { width: clamp(220px, 26vw, 340px); }

@@ -57,7 +57,7 @@ footer {
 }
 
 /* ===== Page heading ===== */
-header {
+.container header{
   font-family: 'Playfair Display', serif;
   text-shadow: 2px 1px 2px #529379;
   color: #f0f0f0;
@@ -67,8 +67,7 @@ header {
 }
 
 /* ===== About sections (works with .about-row or .about-left) ===== */
-.about-row,
-.about-left {
+.about-row{
   display: grid;
   grid-template-columns: 1fr;       /* mobile: stack */
   gap: 1.5rem;

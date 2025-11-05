@@ -60,13 +60,15 @@ footer {
 }
 
 /* ===== Contact content ===== */
-.contact-head { text-align: center; margin: 2rem 0 1rem; }
+.contact-head { text-align: center; margin: 2rem 0 1rem;}
 
 .contact-head h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: clamp(1.8rem, 2.4vw + 1rem, 3rem);
+  font-family: 'Playfair Display', serif;
   text-shadow: 2px 1px 2px #529379;
-  margin: 0 0 .25rem;
+  color: #f0f0f0;
+  text-align: center;
+  margin: 48px 0 24px;
+  font-size: 36px;
 }
 .contact-head p { color:#529379; margin: 0; }
 

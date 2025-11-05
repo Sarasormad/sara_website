@@ -93,12 +93,12 @@ footer {
 
 .about-row .text,
 .about-left .text {
-  max-width: 120ch;       /* keeps line length readable */
+  max-width: 120ch;       
   width: 100%;
-  margin-left: auto;     /* centers the block */
-  margin-right: auto;    /* centers the block */
-  text-align: center;    /* centers the text itself */
-  padding-inline: 1rem;  /* keeps edges from touching screen */
+  margin-left: auto;     
+  margin-right: auto;    
+  text-align: center;    
+  padding-inline: 1rem;  
 }
 
 

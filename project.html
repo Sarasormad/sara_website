@@ -1,74 +1,83 @@
 <!DOCTYPE html>
-<html lang = "en">
+<html lang="en">
 <head>
-    <meta charset = "UTF-8">
-    <title>Mini Portfolio</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href= "project_style.css"/> <!-- External CSS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <meta charset="UTF-8" />
+  <title>Mini Portfolio – Achievements</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Quicksand:wght@300;400;500&display=swap" rel="stylesheet" />
 
+  <!-- Styles -->
+  <link rel="stylesheet" href="project_style.css" />
 </head>
 
-
 <body>
-    <header class = "top-banner">
-        <div class="logo">Sara's Portfolio</div>
-        <nav class ="nav-tabs">
-            <a href="index.html" class="tab">Home</a>
-            <a href="aboutme.html" class="tab">About</a>
-            <a href="project.html" class="tab">Achievements</a>
-            <a href="contact.html" class="tab">Contact</a>
-        </nav>
+  <!-- ===== Shared Header / Nav ===== -->
+  <div class="top-banner">
+    <div class="logo">Sara's Portfolio</div>
+    <nav class="nav-tabs">
+      <a href="index.html" class="tab">Home</a>
+      <a href="aboutme.html" class="tab">About</a>
+      <a href="project.html" class="tab">Achievements</a>
+      <a href="contact.html" class="tab">Contact</a>
+    </nav>
+  </div>
+
+  <main class="container">
+    <header>
+      <h1>Achievements</h1>
     </header>
-    <main class = "title">
-        <header>
-            <h1>Achievements</h1>
-        </header>
-    </main>
-    <!-- Award Section-->
-    <section id= "pa", class= "pa-row">
-        <div class=" type">
-            <h2>Awards and Recognition</h2> 
-            <div class="image-awards">
-                <img src="/Users/saramadjdi/Desktop/Screenshot 2025-07-25 at 9.58.40 PM.png" class="award-photo" alt="Education photo 1" />
-            </div>
-            <h3>Dean's List</h3>
-            <h3>Outstanding Undergraduate Mathematics Award</h3>
-            <h3>Leslie and Terry Cutler Science and Mathematics Endowment Scholarship</h3>
-        </div>
-    </section>
-    <!-- Projects Section-->
+
+    <!-- ===== Projects Section ===== -->
     <section class="proj-row">
-        <div class="text">
-          <h2>Projects</h2>
-          <div class="contact-actions">
-            <a class="btn" href="https://github.com/sarasormad" target="_blank" rel="noopener">GitHub</a>
-          </div>
-          <div class="image-jpl">
-            <img src="/Users/saramadjdi/Desktop/Screenshot 2025-07-25 at 9.58.40 PM.png" class="jpl-photo" alt="Education photo 1" />
-            <img src="/Users/saramadjdi/Downloads/IMG_3575.JPG" class="jpl-photo2" alt="Education photo 2" />
-          </div>
-          <h3> NASA - Jet Propulsion Laboratory Data Science Internship</h3>
-          <h3> Personal Portfolio Web Development</h3>
-          <h3> Machine Learning Body Fat Percentage Predictor</h3>
+      <div class="text">
+        <h2>Projects</h2>
+        <div class="contact-actions">
+          <a class="btn" href="https://github.com/sarasormad" target="_blank" rel="noopener">GitHub</a>
         </div>
+        <div class="image-group">
+          <img src="images/jpl1.JPG" class="proj-photo" alt="NASA JPL Data Science Internship" />
+          <img src="images/IMG_3575.JPG" class="proj-photo" alt="NASA JPL Internship work" />
+        </div>
+        <ul class="achievements-list">
+          <li>NASA – Jet Propulsion Laboratory Data Science Internship</li>
+          <li>Personal Portfolio Web Development</li>
+          <li>Machine Learning Body Fat Percentage Predictor</li>
+        </ul>
+      </div>
     </section>
-    <!-- Research Section-->
+
+    <!-- ===== Research Section ===== -->
     <section class="research-row">
-        <div class="re-text">
-          <h2>Research</h2>
-          <h3> Deep Neural Networks research in progress with Dr. Verma, California State University Northridge</h3>
-        </div>
+      <div class="text">
+        <h2>Research</h2>
+        <p>Deep Neural Networks research in progress with Dr. Verma, California State University Northridge.</p>
+      </div>
     </section>
 
+    <!-- ===== Awards Section ===== -->
+    <section class="pa-row">
+      <div class="text">
+        <h2>Awards and Recognition</h2>
+        <div class="image-group">
+          <img src="images/award.JPG" class="award-photo" alt="Award ceremony photo" />
+          <img src="images/scholarship.jpeg" class="award-photo" alt="Scholarship recognition" />
+        </div>
+        <ul class="achievements-list">
+          <li>Dean's List</li>
+          <li>Outstanding Undergraduate Mathematics Award</li>
+          <li>Leslie and Terry Cutler Science and Mathematics Endowment Scholarship</li>
+        </ul>
+      </div>
+    </section>
+  </main>
 
-    <!-- Footer (same as other pages) -->
-    <footer class="container">
-        <p>&copy; 2025 Sara Madjdi-Sorkhabi. All rights reserved.</p>
-      </footer>
+  <!-- ===== Shared Footer ===== -->
+  <footer class="container">
+    <p>&copy; 2025 Sara Madjdi-Sorkhabi. All rights reserved.</p>
+  </footer>
 </body>
 </html>

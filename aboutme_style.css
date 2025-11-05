@@ -13,8 +13,6 @@ body {
   line-height: 1.6;
 }
 
-/* Optional: centered content width like other page */
-.container { width: min(100% - 2rem, 1100px); margin-inline: auto; }
 
 /* ===== Shared header / nav ===== */
 .top-banner {
@@ -30,6 +28,8 @@ body {
   z-index: 1000;
   border-bottom: 1px solid #444;
 }
+
+
 .logo { font-size: 26px; font-weight: bold; }
 .nav-tabs {
   margin-right: 30px;               /* add px */
@@ -45,7 +45,11 @@ body {
   border-radius: 8px;
   transition: background-color .2s;
 }
-.nav-tabs .tab:hover { background-color: #575757; }
+.nav-tabs .tab:hover {
+  background-color: #575757;
+}
+
+
 
 /* ===== Footer (shared) ===== */
 footer {
@@ -55,6 +59,8 @@ footer {
   color: #fff;
   margin-top: 2.5rem;
 }
+
+
 
 /* ===== Page heading ===== */
 .container header{
@@ -66,91 +72,50 @@ footer {
   font-size: 36px;
 }
 
+
 /* ===== About sections (works with .about-row or .about-left) ===== */
 .about-row{
-  display: grid;
-  grid-template-columns: 1fr;       /* mobile: stack */
-  gap: 1.5rem;
-  align-items: start;
-  margin: 2rem 0;
-  padding: 0 1rem;
   font-family: 'Cormorant Garamond', serif;
 }
 
+#about .container {
+  width: 100%;
+  max-width: none;
+  margin-inline: 0;
+  padding-inline: 1rem;   /* keep a little side padding */
+}
+
+
 /* text block */
 .about-row .text,
-.about-left .text { max-width: 70ch; }
+.about-left .text { max-width: 150ch; }
+
+
+.about-row .text,
+.about-left .text {
+  max-width: 120ch;       /* keeps line length readable */
+  width: 100%;
+  margin-left: auto;     /* centers the block */
+  margin-right: auto;    /* centers the block */
+  text-align: center;    /* centers the text itself */
+  padding-inline: 1rem;  /* keeps edges from touching screen */
+}
+
+
 
 /* section headings & paragraphs */
 #about h2,
 .about-row h2,
-.about-left h2 { margin: 0 0 12px; font-size: clamp(1.4rem, 1.2vw + 1rem, 2.25rem); }
+.about-left h2 { font-size: clamp(1.4rem, 1.2vw + 1rem, 2.25rem); }
+
+
 
 #about p,
 .about-row p,
-.about-left p { margin: 0 0 10px; font-size: 18px; line-height: 1.7; }
+.about-left p {font-size: 18px; line-height: 1.7; }
 
-/* images: personal single */
-.image-personal img {
-  width: min(100%, 400px);       /* keep responsive */
-  height: auto;                  /* let it scale naturally */
-  max-height: 230px;             /* limit the vertical length */
-  object-fit: cover;             /* crop if needed */
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
 
-/* images: education pair */
-.image-personal-ed {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(160px, 1fr));
-  gap: 1rem;
-  align-items: start;
-}
-.ed-photo,
-.ed-photo2 {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,.2);
-}
 
-/* hobbies carousel */
-.image-hobbies {
-  width: 100%;
-  margin-top: 16px;
-  overflow: hidden;
-  height: 220px;
-  position: relative;
-}
-.carousel-track {
-  display: flex;
-  width: max-content;
-  animation: scroll 30s linear infinite;
-  gap: 0;                           /* seamless */
-}
-.carousel-track img {
-  width: clamp(200px, 20vw, 320px);
-  height: 100%;        /* fills the new 220px height */
-  object-fit: cover;
-}
-
-@keyframes scroll {
-  0%   { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
-}
-
-/* ===== Breakpoints ===== */
-@media (min-width: 780px) {
-  .about-row,
-  .about-left {
-    grid-template-columns: 1.15fr 1fr;  /* text | image(s) */
-    gap: 2rem;
-    padding: 0;                          /* container handles side padding */
-  }
-}
 
 @media (min-width: 1000px) {
   .nav-tabs { font-size: 20px; gap: .75rem; }
